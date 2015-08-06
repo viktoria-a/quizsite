@@ -5,7 +5,7 @@ quizzes = {
 	"name:" u"Klassiska böcker",
 	"description:" u"Hur bra kan du dina klassiker?"
 	},
-	"fotboll": {
+	"otboll": {
 	"name:" u"Största fotbollslagen",
 	"description" u"Kan du dina lag?"
 	},
@@ -29,8 +29,16 @@ def index(request, slug):
 	}
 	return render(request, "quiz/index.html", context)
 
-def abortratt1(request):
-	return render(request, "quiz/abortratt1.html")
+def question(request, slug, number):
+	context = {
+	"question_number": number, 
+	"question": u"Hur många bultar har Ölandsbron?",
+	"answer1": u"12",
+	"answer2": u"66 400",
+	"answer3": u"343",
+	"quiz_slug": slug,
+	}
+	return render(request, "quiz/question.html", context)
 
 def resultat(request):
 	return render(request, "quiz/resultat.html")
