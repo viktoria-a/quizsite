@@ -11,7 +11,13 @@
 <h1>#tjejerkodaripalma</h1>
 <p>I augusti 2015 åkte tjugo tjejer till Mallorca för att under en vecka lära sig koda och bygga webbplatser. </p>
 <p>
-Målet med veckan var att skapa frågesporter, eftersom det gav oss möjlighet att testa olika saker som python, html, css, django, sublime text, github, databaser och säkert mycket mera. </p>
+Målet med veckan var att skapa frågesporter, eftersom det gav oss möjlighet att testa olika saker som python, html, css, django, sublime text, github, databaser och mycket mera. </p>
+
+{% for index_slug, quiz in quizzes.items %}
+<p><a href="{% url "index_page" index_slug %}">
+{{ quiz.name }}
+</a></p>
+{% endfor %}
 
 <h2>Frågesporter</h2>
 <ul>

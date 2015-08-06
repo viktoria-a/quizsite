@@ -1,17 +1,17 @@
 #coding: utf-8
 from django.shortcuts import render
 quizzes = {
-	"Klassiker": {
-	"name:" u"Klassiska böcker",
-	"description:" u"Hur bra kan du dina klassiker?"
+	"klassiker": {
+	"name": u"Klassiska böcker",
+	"description": u"Hur bra kan du dina klassiker?"
 	},
 	"fotboll": {
-	"name:" u"Största fotbollslagen",
-	"description" u"Kan du dina lag?"
+	"name": u"Största fotbollslagen",
+	"description": u"Kan du dina lag?"
 	},
-	"Kanada-hackare": {
-	"name:" u"Världens mest kända hackare",
-	"description:" u"Hacker-historia är viktigt, kan du den?"
+	"kanada-hackare": {
+	"name": u"Världens mest kända hackare",
+	"description": u"Hacker-historia är viktigt, kan du den?"
 	},
 }
 
