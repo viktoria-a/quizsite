@@ -5,7 +5,7 @@ quizzes = {
 	"name:" u"Klassiska böcker",
 	"description:" u"Hur bra kan du dina klassiker?"
 	},
-	"Fotboll": {
+	"fotboll": {
 	"name:" u"Största fotbollslagen",
 	"description" u"Kan du dina lag?"
 	},
