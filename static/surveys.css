@@ -1,0 +1,19 @@
+body {background: #A3C2FF}
+body {margin: 70px}
+body {width: 500px}
+
+p {font-family: "helvetica", sans-serif}
+* {color: black}
+h1 {font-size: 20px;}
+h2 {font-size: 18px}
+p {font-size: 16px}
+a:link {
+	font-weight:bold; 
+	text-decoration: none;
+}
+a:visited {
+	color: black;
+}
+img {display: block}
+ul {list-style-type: square}
+
