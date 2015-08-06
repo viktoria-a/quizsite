@@ -22,14 +22,19 @@ def surveys(request):
 	}
 	return render(request, "quiz/surveys.html", context)
 
-def index(request):
-	return render(request, "quiz/index.html")
+def index(request, slug):
+	context = {
+        "quiz": quizzes[slug],
+        “quiz_slug”: slug,
+    }
+    return render(request, "quiz/index.html", context)
 
 def abortratt1(request):
 	return render(request, "quiz/abortratt1.html")
 
 def resultat(request):
 	return render(request, "quiz/resultat.html")
+
 
 
 
