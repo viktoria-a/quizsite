@@ -7,8 +7,9 @@ h2 {font-size: 18px;}
 p {font-size: 16px}
 a:link {color: black}
 a:visited {color: black;}
-img {display: block; margin: 10px, auto}
+img {display: block; margin: 10px, 10px}
 label {
   margin: 30px 30px;
+  padding: 10px ;
 }
 
