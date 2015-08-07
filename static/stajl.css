@@ -1,11 +1,11 @@
-body {background: #F0EBE6}
+body {background: #E99494}
 body {margin: 30px}
 body {width: 460px}
 p {font font-family: "helvetica", sans-serif}
-* {font color: black}
-h1 {font-size: 20px}
-h2 {font-size: 18px; color: #800000;}
-p {font-size: 16px}
+* {font color: #2F2F2B}
+h1 {font-size: 18px;}
+h2 {font-size: 16px;}
+p {font-size: 14px}
 a:link {color: black}
 a:visited {color: black;}
 img {display: block; margin: 10px, auto}
