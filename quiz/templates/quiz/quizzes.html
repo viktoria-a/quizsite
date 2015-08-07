@@ -11,14 +11,18 @@
 <h1>Abort i Sverige</h1>
 <p>Den 1 januari 2015 högtidlighölls att det var 40 år sedan Sveriges lagstiftning om fri abort trädde i kraft. Strax därinnan, hösten 2014, berättade RFSU och RFSUs aborträttsnätverk <a href="http://www.rfsu.se/abort40">historien om vägen till fri abort</a>.</p>
 
-<p>
-Quiz om Sveriges aborträttshistoria</p>
+<h2>
+Quiz om Sveriges aborträttshistoria</h2>
 
 {% for quiz in quizzes %}
 <p><a href="{% url "quiz_page" quiz.slug %}">
 {{ quiz.name }}
 </a></p>
 {% endfor %}
+
+<p>Aborträttsquizen skapades som ett testprojekt under ett kodläger med <a href="www.tjejerkodar.se">Tjejer kodar</a> augusti 2015 av Viktoria Asp. 
+</p>
+Faktan är hämtad från <a href="www.rfsu.se/abort40">Abort40</a> och RFSU:s broschyr <a href="http://www.rfsu.se/Bildbank/Dokument/Sexualpolitik/omabort_web.pdf?epslanguage=sv">Om abort.</a> 
 
 <img src="/static/460x132abort.jpg" alt="abort40-logga">
 

@@ -1,6 +1,5 @@
-body {background: #E99494}
+body {background: #EFE5DB}
 body {margin: 30px}
-body {width: 300px}
 p {font font-family: "helvetica"}
 * {font color: #2F2F2B}
 h1 {font-size: 20px;}
@@ -10,6 +9,6 @@ a:link {color: black}
 a:visited {color: black;}
 img {display: block; margin: 10px, auto}
 label {
-  margin: 30px 0;
+  margin: 30px 30px;
 }
 
