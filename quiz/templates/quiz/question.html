@@ -8,22 +8,21 @@
 </head>
 <body>
 <h1>{{ question_number }}. {{ question }}</h1>
-<form action="resultat.php">
-<input type="radio" name="year" value="1934">1934
-<br>
-<input type="radio" name="year" value="1974">1974
-<br>
-<input type="radio" name="year" value="1990">1990
+<form action="{% url "question_page" quiz.slug question_number %}" method="post">
+{% csrf_token %}
 <p>
-<input type="submit" value="Skicka in svar">
+<label="answer1">
+<input type="radio" name="answer" value="1">{{ answer1 }}
+</label>
+<label="answer2">
+<input type="radio" name="answer" value="2">{{ answer2 }}
+</label>
+<label>
+<input type="radio" name="answer" value="3">{{ answer3 }}
+</label="answer3">
+<button type="submit">Nästa</button>
 </p>
 </form>
-
-
-<h1>{{ question_number }}. {{ question }}</h1>
-<p>{{ answer1 }}</p>
-<p>{{ answer2 }}</p>
-<p>{{ answer3 }}</p>
 
 <p<{% url "question_page" quiz.slug question_number|add:1 %}>Nästa</a></p>
 
