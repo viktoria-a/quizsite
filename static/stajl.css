@@ -9,4 +9,7 @@ p {font-size: 14px}
 a:link {color: black}
 a:visited {color: black;}
 img {display: block; margin: 10px, auto}
+label {
+  margin-left: 30px;
+}
 
