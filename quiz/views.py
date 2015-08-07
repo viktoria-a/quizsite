@@ -3,9 +3,9 @@ from django.shortcuts import render
 from quiz.models import Quiz
 
 # Create your views here.
-def surveys(request):
+def quizzes(request):
 	context = {
-		"quizzes": quizzes,
+	"quizzes": Quiz.objects.all(),
 	}
 	return render(request, "quiz/quizzes.html", context)
 
@@ -15,16 +15,22 @@ def quiz(request, slug):
 	}
 	return render(request, "quiz/quiz.html", context)
 
+
 def question(request, slug, number):
-	context = {
-	"question_number": number, 
-	"question": u"Hur många bultar har Ölandsbron?",
-		"answer1": u"12",
-		"answer2": u"66 400",
-		"answer3": u"343",
-	"quiz_slug": slug,
-	}
-	return render(request, "quiz/question.html", context)
+    number = int(number)
+    quiz = Quiz.objects.get(slug=slug)
+    questions = quiz.questions.all()
+    question = questions[number - 1]
+    context = {
+            "question_number": number,
+            "question": question.question,
+            "answer1": question.answer1,
+            "answer2": question.answer2,
+            "answer3": question.answer3,
+            "quiz": quiz,
+    }
+    return render(request, "quiz/question.html", context)
+
 
 def resultat(request, slug):
 	context = {
