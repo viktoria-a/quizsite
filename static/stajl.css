@@ -1,15 +1,15 @@
 body {background: #E99494}
 body {margin: 30px}
-body {width: 460px}
-p {font font-family: "helvetica", sans-serif}
+body {width: 300px}
+p {font font-family: "helvetica"}
 * {font color: #2F2F2B}
-h1 {font-size: 18px;}
-h2 {font-size: 16px;}
-p {font-size: 14px}
+h1 {font-size: 20px;}
+h2 {font-size: 18px;}
+p {font-size: 16px}
 a:link {color: black}
 a:visited {color: black;}
 img {display: block; margin: 10px, auto}
 label {
-  margin-left: 30px;
+  margin: 30px 0;
 }
 

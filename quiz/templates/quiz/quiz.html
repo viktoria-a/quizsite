@@ -8,12 +8,11 @@
 </head>
 <h1>{{ quiz.name }}</h1>
 <p>{{ quiz.description }}</p>
+
 <body>
 <p><a href="{% url "question_page" quiz.slug 1 %}">Starta</a></p>
 
-
 <img src="/static/460x132abort.jpg">
-
 
 </body>
 </html>
