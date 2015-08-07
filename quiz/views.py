@@ -13,17 +13,32 @@ def quizzes(request):
 
 def quiz(request, slug):
 	context = {
-	"quiz": Quiz.objects.get(slug=slug),
+	"quiz": Quiz.objects.get(slug=slug)
 	}
 	return render(request, "quiz/quiz.html", context)
+
 
 
 def question(request, slug, number):
     number = int(number)
     quiz = Quiz.objects.get(slug=slug)
     questions = quiz.questions.all()
-    if number > questions.count():
-    	return redirect("resultat_page", quiz.slug)
+   # if number > questions.count():
+    #	return redirect("resultat_page", quiz.slug)
+    if request.POST:
+        answer = int(request.POST["answer"])
+        saved_answers = {}
+    	if quiz.slug in request.session:
+    		saved_answers = request.session[quiz.slug]
+        saved_answers[str(number)] = answer
+        request.session[quiz.slug] = saved_answers
+
+        if questions.count() == number:
+        	return redirect("resultat_page", quiz.slug)
+        else:
+        	return redirect("question_page", quiz.slug,
+    number +1)
+
     question = questions[number - 1]
     context = {
             "question_number": number,
@@ -37,13 +52,19 @@ def question(request, slug, number):
 
 
 def resultat(request, slug):
+	quiz = Quiz.objects.get(slug=slug)
+	questions = quiz.questions.all()
+	saved_answers = request.session[slug]
+	num_correct_answers = 0
+	for counter, question in enumerate(questions):
+		if question.correct == saved_answers[str(counter + 1)]:
+			num_correct_answers += 1
 	context = {
-	"correct": 12,
-	"total": 20,
-	"quiz_slug": slug,
+		"correct": num_correct_answers, 
+		"total": questions.count(),
+		"quiz": quiz,
+
 	}
 	return render(request, "quiz/resultat.html", context)
-
-
 
 
