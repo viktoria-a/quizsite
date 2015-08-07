@@ -4,17 +4,16 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="/static/normalize.css">
 <link rel="stylesheet" href="/static/stajl.css">
-<title>Vad kan du om svensk aborträtt?</title>
+<title>{{ quiz.name }}</title>
 </head>
 <body>
-<h2>Fråga 1</h2>
-<p>Vilket år fick Sverige fri abort?</p>
+<h1>{{ question_number }}. {{ question }}</h1>
 <form action="resultat.php">
-<input type="radio" name="year free abortion" value="1934">1934
+<input type="radio" name="year" value="1934">1934
 <br>
-<input type="radio" name="year free abortion" value="1974">1974
+<input type="radio" name="year" value="1974">1974
 <br>
-<input type="radio" name="year free abortion" value="1990">1990
+<input type="radio" name="year" value="1990">1990
 <p>
 <input type="submit" value="Skicka in svar">
 </p>
