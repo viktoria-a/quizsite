@@ -1,33 +1,19 @@
 #coding: utf-8
 from django.shortcuts import render
-quizzes = {
-	"klassiker": {
-	"name": u"Klassiska böcker",
-	"description": u"Hur bra kan du dina klassiker?"
-	},
-	"fotboll": {
-	"name": u"Största fotbollslagen",
-	"description": u"Kan du dina lag?"
-	},
-	"kanada-hackare": {
-	"name": u"Världens mest kända hackare",
-	"description": u"Hacker-historia är viktigt, kan du den?"
-	},
-}
+from quiz.models import Quiz
 
 # Create your views here.
 def surveys(request):
 	context = {
 		"quizzes": quizzes,
 	}
-	return render(request, "quiz/surveys.html", context)
+	return render(request, "quiz/quizzes.html", context)
 
-def index(request, slug):
+def quiz(request, slug):
 	context = {
-	"quiz": quizzes[slug],
-	"quiz_slug": slug,
+	"quiz": Quiz.objects.get(slug=slug),
 	}
-	return render(request, "quiz/index.html", context)
+	return render(request, "quiz/quiz.html", context)
 
 def question(request, slug, number):
 	context = {
