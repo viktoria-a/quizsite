@@ -13,10 +13,9 @@
 <p>
 Målet med veckan var att skapa frågesporter, eftersom det gav oss möjlighet att testa olika saker som python, html, css, django, sublime text, github, databaser och mycket mera. </p>
 
+mina frågesporter
 {% for quiz in quizzes %}
-{% url "quiz_page" quiz.slug %}
-
-
+<p><a href="{% url "quiz_page" quiz.slug %}">
 {{ quiz.name }}
 </a></p>
 {% endfor %}
