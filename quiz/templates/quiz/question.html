@@ -7,23 +7,23 @@
 <title>{{ quiz.name }}</title>
 </head>
 <body>
-<h1>{{ question_number }}. {{ question }}</h1>
+<h2>{{ question_number }}. {{ question }}</h2>
 <form action="{% url "question_page" quiz.slug question_number %}" method="post">
 {% csrf_token %}
 <p>
-<label="answer1">
+<label>
 <input type="radio" name="answer" value="1">{{ answer1 }}
-</label="answer1">
+</label>
 </p>
 <p>
-<label="answer2">
+<label>
 <input type="radio" name="answer" value="2">{{ answer2 }}
-</label="answer2">
+</label>
 </p>
 <p>
 <label>
 <input type="radio" name="answer" value="3">{{ answer3 }}
-</label="answer3">
+</label>
 </p>
 <p>
 <button type="submit">Nästa</button>
