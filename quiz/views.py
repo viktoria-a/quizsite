@@ -5,11 +5,11 @@ from django.shortcuts import redirect
 
 
 # Create your views here.
-def quizzes(request):
-	context = {
-	"quizzes": Quiz.objects.all(),
-	}
-	return render(request, "quiz/quizzes.html", context)
+# def quizzes(request):
+# 	context = {
+# 	"quizzes": Quiz.objects.all(),
+# 	}
+# 	return render(request, "quiz/quizzes.html", context)
 
 def quiz(request, slug):
 	context = {
