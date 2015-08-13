@@ -4,7 +4,7 @@ from django.db import models
 
 class Quiz(models.Model):
 	name = models.CharField(max_length=300)
-	slug = models.SlugField(max_length=100)
+	slug = models.SlugField(max_length=300)
 	description = models.TextField()
 	def __unicode__ (self):
 		return self.name
