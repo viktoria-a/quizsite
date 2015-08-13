@@ -23,6 +23,8 @@ def question(request, slug, number):
     number = int(number)
     quiz = Quiz.objects.get(slug=slug)
     questions = quiz.questions.all()
+   # if number > questions.count():
+    #	return redirect("resultat_page", quiz.slug)
     if request.POST:
         answer = int(request.POST["answer"])
         saved_answers = {}

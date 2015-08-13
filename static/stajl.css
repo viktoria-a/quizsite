@@ -1,20 +1,6 @@
-@media only screen and (min-width: 321px) { 
-.container {
-    display: table: 
-    width: 100%;
-}
-.row { display: table-row; }
-.column { display: table-cell; }
-}
-
-
-
 body {background: #EFE5DB}
 body {margin: 30px}
-.footer {font-size: 14px; font-style: italic;} {background: white}
-.header {font-size: 26px; font color: #2F2F00;}
-
-p {font font-family: "roboto"}
+p {font font-family: "helvetica"}
 * {font color: #2F2F2B}
 h1 {font-size: 20px;}
 h2 {font-size: 18px;}
