@@ -9,21 +9,24 @@
 
 }*/
 
-body {background: #EFE5DB}
-body {margin: 30px}
-.footer {font-size: 14px; font-style: italic;} {background: white}
-.header {font-size: 26px; font color: #2F2F00;}
 
+body {background: #C49B9B}
 p {font font-family: "helvetica"}
 * {font color: #2F2F2B}
-h1 {font-size: 20px;}
-h2 {font-size: 18px;}
+h1 {font-size: 20px; 
+	margin: 0; 
+	padding:10px}
+h2 {font-size: 18px}
 p {font-size: 16px}
 a:link {color: black}
-a:visited {color: black;}
+a:visited {color: black}
 img {display: block; margin: 10px, 10px}
 label {
   margin: 30px 30px;
   padding: 10px ;
 }
 
+
+#header {height: 50px; background: #DCC3C3}
+#content {padding: 10px;} 
+#footer {padding: 10px; background: #DCC3C3}

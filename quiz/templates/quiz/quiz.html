@@ -6,14 +6,18 @@
 <link rel="stylesheet" href="/static/stajl.css">
 <title>{{ quiz.name }}</title>
 </head>
+<body>
+<div id="header">
 <h1>{{ quiz.name }}</h1>
+</div>
+<div id="content">
 <p>{{ quiz.description }}</p>
 
-<body>
 <p><a href="{% url "question_page" quiz.slug 1 %}">Starta</a></p>
 
-<img src="/static/460x132abort.jpg">
+</div>
 
+{% include "quiz/footer.html" %}
 </body>
 </html>
 

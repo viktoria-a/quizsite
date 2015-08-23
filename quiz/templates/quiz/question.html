@@ -7,6 +7,10 @@
 <title>{{ quiz.name }}</title>
 </head>
 <body>
+<div id="header"></div>
+<div id="content">
+<!-- <img src="{{ imagelink }}" alt="quiz"> -->
+
 <h2>{{ question_number }}. {{ question }}</h2>
 <form action="{% url "question_page" quiz.slug question_number %}" method="post">
 {% csrf_token %}
@@ -29,8 +33,7 @@
 <button type="submit">Nästa</button>
 </p>
 </form>
-
-<!-- <p<{% url "question_page" quiz.slug question_number|add:1 %}>Nästa</a></p> -->
+</div>
 
 </body>
 </html>

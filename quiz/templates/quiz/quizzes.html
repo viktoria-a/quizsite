@@ -8,10 +8,15 @@
 </head>
 <body>
 
+<div id="header">
 <h1>Abort i Sverige</h1>
+</div>
+
+<div id="content">
 <p>Den 1 januari 2015 högtidlighölls att det var 40 år sedan Sveriges lagstiftning om fri abort trädde i kraft. Strax därinnan, hösten 2014, berättade RFSU och RFSUs aborträttsnätverk <a href="http://www.rfsu.se/abort40">historien om vägen till fri abort</a>.</p>
 
-<p>Som en (mycket) komprimerad sammanfattning om vägen till fri abort kan du testa dina kunskaper om aborträtt i ett quiz. Aborträttsquizet skapades som ett testprojekt under ett kodläger med <a href="www.tjejerkodar.se">Tjejer kodar</a> augusti 2015 av Viktoria Asp. Faktan är hämtad från <a href="www.rfsu.se/abort40">Abort40</a> och RFSU:s broschyr <a href="http://www.rfsu.se/Bildbank/Dokument/Sexualpolitik/omabort_web.pdf?epslanguage=sv">Om abort.</a> 
+
+<p>Som en (mycket) komprimerad sammanfattning om vägen till fri abort kan du testa dina kunskaper om aborträtt i ett quiz. Faktan är hämtad från <a href="http://www.rfsu.se/abort40">Abort40</a> och RFSU:s broschyr <a href="http://www.rfsu.se/Bildbank/Dokument/Sexualpolitik/omabort_web.pdf?epslanguage=sv">Om abort.</a> 
 <p>
 
 {% for quiz in quizzes %}
@@ -22,6 +27,8 @@
 </p>
 
 <img src="/static/kr.jpg">
+</div>
+{% include "quiz/footer.html" %}
 
 </body>
 </html>
