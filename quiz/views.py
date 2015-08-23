@@ -24,7 +24,9 @@ def question(request, slug, number):
     quiz = Quiz.objects.get(slug=slug)
     questions = quiz.questions.all()
     if request.POST:
-        answer = int(request.POST["answer"])
+        answer = int(request.POST.get("answer", 0))
+        if answer == 0:
+            return redirect ("question_page", quiz.slug, number)
         saved_answers = {}
     	if quiz.slug in request.session:
     		saved_answers = request.session[quiz.slug]
