@@ -34,8 +34,7 @@ def question(request, slug, number):
         if questions.count() == number:
         	return redirect("resultat_page", quiz.slug)
         else:
-        	return redirect("question_page", quiz.slug,
-    number +1)
+        	return redirect("question_page", quiz.slug, number +1)
 
     question = questions[number - 1]
     context = {
